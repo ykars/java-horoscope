@@ -4,7 +4,7 @@ import java.util.Calendar;
 /**
  * 星座占い作成クラス
  */
-public class ConstellationFactory {
+public class HoroscopeFactory {
     // 星座名一覧
     private static final String[] NAMES = {
             "おひつじ座",
@@ -27,12 +27,12 @@ public class ConstellationFactory {
      * @param calendar 占いの日付
      * @return 指定した日付の全ての星座
      */
-    public static ArrayList<Constellation> createAll(Calendar calendar) {
-        ArrayList<Constellation> constellations = new ArrayList<Constellation>();
+    public static ArrayList<Horoscope> createAll(Calendar calendar) {
+        ArrayList<Horoscope> horoscopes = new ArrayList<Horoscope>();
         for (String name : NAMES) {
-            Constellation constellation = new Constellation(name, calendar);
-            constellations.add(constellation);
+            Horoscope horoscope = new Horoscope(name, calendar);
+            horoscopes.add(horoscope);
         }
-        return constellations;
+        return horoscopes;
     }
 }

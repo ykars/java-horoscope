@@ -7,7 +7,7 @@ import java.util.Comparator;
 /**
  * 星座占いのユースケースに応じた機能を提供するクラス
  */
-public class ConstellationUseCase {
+public class HoroscopeUseCase {
     /**
      * 星座占いランキングを出力する
      *
@@ -15,18 +15,18 @@ public class ConstellationUseCase {
      */
     public static void printRanking(Calendar calendar) {
         // 星座占い一覧を作成
-        ArrayList<Constellation> constellations = ConstellationFactory.createAll(calendar);
+        ArrayList<Horoscope> horoscopes = HoroscopeFactory.createAll(calendar);
 
         // ソート用の比較オブジェクトを用意
-        Comparator<Constellation> comparator = new Comparator<Constellation>() {
+        Comparator<Horoscope> comparator = new Comparator<Horoscope>() {
             @Override
-            public int compare(Constellation c1, Constellation c2) {
-                return c1.getScore().compareTo(c2.getScore());
+            public int compare(Horoscope hs1, Horoscope hs2) {
+                return hs1.getScore().compareTo(hs2.getScore());
             }
         };
 
         // ソート
-        Collections.sort(constellations, comparator);
+        Collections.sort(horoscopes, comparator);
 
         // 日付を出力
         SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy/MM/dd");
@@ -34,8 +34,8 @@ public class ConstellationUseCase {
 
         // ランキングを出力
         int rank = 1;
-        for (Constellation constellation : constellations) {
-            String line = String.format("第%d位: %s (スコア: %d)", rank, constellation.getName(), constellation.getScore());
+        for (Horoscope horoscope : horoscopes) {
+            String line = String.format("第%d位: %s (スコア: %d)", rank, horoscope.getName(), horoscope.getScore());
             System.out.println(line);
             rank++;
         }
