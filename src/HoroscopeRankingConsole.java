@@ -14,7 +14,7 @@ public class HoroscopeRankingConsole implements IHoroscopeRankingPrinter {
         Comparator<Horoscope> comparator = new Comparator<Horoscope>() {
             @Override
             public int compare(Horoscope hs1, Horoscope hs2) {
-                return hs1.getScore().compareTo(hs2.getScore());
+                return hs1.getScore().compareTo(hs2.getScore()) * -1;
             }
         };
 
