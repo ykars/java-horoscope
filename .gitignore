@@ -1,5 +1,5 @@
 # binフォルダを除外
-bin/
+/bin/
 
 #libフォルダを除外
-lib/
+/lib/
