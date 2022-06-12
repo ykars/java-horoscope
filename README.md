@@ -1,5 +1,6 @@
 ## クラス構成
 
+- `App`: メインクラス
 - `Horoscope`: 星座占いのモデル
 - `HoroscopeFactory`: 星座占いを作成するクラス
 - `HoroscopeRankingConsole`: IHoroscopeRankingPrinterを実装し、星座占いランキングをコンソールに出力するクラス
