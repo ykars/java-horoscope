@@ -5,7 +5,6 @@ import java.util.Calendar;
  * 星座占い作成クラス
  */
 public class HoroscopeFactory {
-    // 星座名一覧
     private static final String[] NAMES = {
             "おひつじ座",
             "おうし座",

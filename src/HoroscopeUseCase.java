@@ -12,10 +12,7 @@ public class HoroscopeUseCase {
      * @param rankingPrinter 星座占いランキング出力インスタンス
      */
     public static void printRanking(Calendar calendar, IHoroscopeRankingPrinter rankingPrinter) {
-        // 星座占い一覧を作成
         ArrayList<Horoscope> horoscopes = HoroscopeFactory.createAll(calendar);
-
-        // ランキング出力
         rankingPrinter.print(horoscopes, calendar);
     }
 }
